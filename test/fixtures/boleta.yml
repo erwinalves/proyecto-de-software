@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cod_boleta: 1
+  vendedor: MyString
+  valor_total: 1
+  tipo_pago: MyString
+  cantidad_producto: 1
+  lista_productos: MyString
+
+two:
+  cod_boleta: 1
+  vendedor: MyString
+  valor_total: 1
+  tipo_pago: MyString
+  cantidad_producto: 1
+  lista_productos: MyString

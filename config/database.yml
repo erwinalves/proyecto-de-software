@@ -23,21 +23,21 @@ default: &default
 
 development:
   <<: *default
-  database: tresB
+  database: basededatos
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  username: holahola
+  username: pablo
 
   # The password associated with the postgres role (username).
-  password: hola123
+  password: pablo1
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  #host: localhost
+  host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
@@ -56,6 +56,8 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+  <<: *default
+  database: project_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -78,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: tresB_production
-  username: tresB
-  password: <%= ENV['TRESB_DATABASE_PASSWORD'] %>
+  database: project_production
+  username: project
+  password: <%= ENV['PROJECT_DATABASE_PASSWORD'] %>

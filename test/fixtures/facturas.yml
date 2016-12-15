@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  monto_factura: 1.5
+  cod_factura: 1
+  cantidad_producto: 1
+  rut_proveedor: 1
+
+two:
+  monto_factura: 1.5
+  cod_factura: 1
+  cantidad_producto: 1
+  rut_proveedor: 1

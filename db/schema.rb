@@ -11,12 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161215232237) do
+
+
+ActiveRecord::Schema.define(version: 20161215213158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "boleta", force: :cascade do |t|
+    t.integer  "cod_boleta"
     t.string   "vendedor"
     t.integer  "valor_total"
     t.string   "tipo_pago"
@@ -35,8 +38,10 @@ ActiveRecord::Schema.define(version: 20161215232237) do
     t.integer  "factura_id"
   end
 
+  
   create_table "facturas", force: :cascade do |t|
     t.float    "monto_factura"
+    t.integer  "cod_factura"
     t.integer  "cantidad_producto"
     t.integer  "rut_proveedor"
     t.datetime "created_at",        null: false
@@ -57,6 +62,7 @@ ActiveRecord::Schema.define(version: 20161215232237) do
     t.integer  "stock_actual"
     t.integer  "stock_minimo"
     t.string   "nombre"
+    t.integer  "cod_producto"
     t.float    "precio"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false

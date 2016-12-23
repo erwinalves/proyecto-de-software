@@ -1,0 +1,9 @@
+.be-red{
+	background-color: rgb(200,50,50);
+}
+.white{
+	color: white;
+}
+.large-padding{
+	padding:10px 5px;
+}

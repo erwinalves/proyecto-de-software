@@ -1,0 +1,27 @@
+<div style="width:80%;margin:0 auto;">
+<h1>Ingresar boletum</h1>
+      <%= form_for @boletum, url: new_boletum_url, html: { method: :post } do |f| %>
+
+ <div class="field">
+  <%= f.text_field :id, placeholder: "id" %>
+  </div>
+  <div class="field">
+  <%= f.text_field :vendedor, placeholder: "Vendedor", style:"height:50px;",class:"form-control" %>
+  </div>
+  <div class="field">
+  <%= f.text_field :valor_total, placeholder: "Escribe aqui el valor total", style:"height:50px;",class:"form-control" %>
+  </div>
+  <div class="field">
+  <%= f.text_field :tipo_pago, placeholder: "Escribe aqui el tipo de pago", style:"height:50px;",class:"form-control" %>
+  </div>
+  <div class="field">
+  <%= f.text_field :cantidad_producto, placeholder: "Escribe aqui la cantidad de productos", style:"height:50px;",class:"form-control" %>
+  </div>
+  <div class="field">
+  <%= f.text_field :lista_productos, placeholder: "Escribe aqui la lista de productos", style:"height:50px;",class:"form-control" %>
+  </div>
+  <div class="field">
+  <%= f.submit "Guardar", class:"btn be-red pink large-padding" %>
+  </div>
+  <%end%>
+  </div>

@@ -9,11 +9,20 @@ a,a:visited{
 
 
 .be-red{
-	background-color: rgb(150,30,30);
+	background-color: rgb(200,50,50);
 }
 .black{
 	color: black;
 }
 .large-padding{
 	padding: 15px 10px;
+}
+.btn{
+	background-color: inherit;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 1.2em;
+	padding: 10px 12px
 }

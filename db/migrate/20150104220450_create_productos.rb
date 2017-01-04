@@ -4,7 +4,6 @@ class CreateProductos < ActiveRecord::Migration
       t.integer :stock_actual
       t.integer :stock_minimo
       t.string :nombre
-      t.integer :cod_producto
       t.float :precio
 
       t.timestamps null: false

@@ -1,0 +1,22 @@
+<%=  form_for(@persona) do |f| %>
+    <% if @persona.errors.any? %>
+        <div id="error_explanation"> </div>
+        <h2><%= pluralize(@persona.errors.count, "error") %> Prohibido guardar este persona:</h2>
+
+        <ul>
+          <% @persona.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+        </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

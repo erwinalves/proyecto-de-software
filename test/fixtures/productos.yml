@@ -4,12 +4,10 @@ one:
   stock_actual: 1
   stock_minimo: 1
   nombre: MyString
-  cod_producto: 1
-  precio: 1.5
+  precio: 
 
 two:
   stock_actual: 1
   stock_minimo: 1
   nombre: MyString
-  cod_producto: 1
-  precio: 1.5
+  precio: 

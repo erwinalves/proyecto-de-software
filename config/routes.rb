@@ -1,7 +1,25 @@
 Rails.application.routes.draw do
+  resources :productos
+  get 'productos/index'
+
+  get 'productos/show'
+
+  get 'productos/destroy'
+
+  get 'productos/update'
+
+  get 'productos/edit'
+
+  get 'productos/new'
+
   root 'welcome#index'
-  get  'welcome/index'
   
+
+  resources :carros
+  resources :facturas
+  resources :boletum
+  resources :personas
+  resources :productos
 
 
   # The priority is based upon order of creation: first created -> highest priority.

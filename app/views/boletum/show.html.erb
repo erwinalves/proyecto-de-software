@@ -1,0 +1,34 @@
+<h1> Mostra Producto  </h1>
+<p>Find me in app/views/boletum/show.html.erb</p>
+
+
+
+  <p>
+  <strong> ID: </strong> 
+  <%= @boletum.id.to_s  %>
+  </p>
+
+  <p>
+  <strong> Vendedor: </strong> 
+  <%= @boletum.vendedor.to_s%>
+  </p>
+
+  <p>
+  <strong> Valor Total: </strong> 
+  <%= @boletum.valor_total.to_s  %>
+  </p>
+
+  <p>
+  <strong> Tipo de Pago: </strong> 
+  <%= @boletum.tipo_pago.to_s  %>
+  </p>
+
+  <p>
+  <strong> Cantidad de Productos: </strong> 
+  <%= @boletum.cantidad_producto.to_s  %>
+  </p>
+
+  <p>
+  <strong> Lista de Productos: </strong> 
+ <%= @boletum.lista_productos.to_s  %>
+  </p>

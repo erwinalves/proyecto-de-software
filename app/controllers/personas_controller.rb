@@ -17,7 +17,7 @@ before_action :set_persona, only: [:show, :edit, :update, :destroy]
      @persona = Persona.new(persona_params)
       respond_to do |format|
         if@persona.save
-          format.html{redirect_to @persona, notice: 'Fue creado un Persona con Exito.'}
+          format.html{redirect_to @persona, notice: 'Fue creado una Persona con Exito.'}
         else
           forma.html{render :new}
         end

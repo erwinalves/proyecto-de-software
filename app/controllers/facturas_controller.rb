@@ -28,7 +28,7 @@ before_action :set_factura, only: [:show, :edit, :update, :destroy]
 
     respond_to do |format|
       if @factura.save
-        format.html { redirect_to @factura, notice: 'factura was successfully created.' }
+        format.html { redirect_to @factura, notice: 'la factura fue creada con exito.' }
         format.json { render :show, status: :created, location: @factura }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ before_action :set_factura, only: [:show, :edit, :update, :destroy]
   def update
     respond_to do |format|
       if @factura.update(factura_params)
-        format.html { redirect_to @factura, notice: 'factura was successfully updated.' }
+        format.html { redirect_to @factura, notice: 'factura escrita con exito' }
         format.json { render :show, status: :ok, location: @factura }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ before_action :set_factura, only: [:show, :edit, :update, :destroy]
   def destroy
     @factura.destroy
     respond_to do |format|
-      format.html { redirect_to facturas_url, notice: 'factura was successfully destroyed.' }
+      format.html { redirect_to facturas_url, notice: 'factura fue eliminada.' }
       format.json { head :no_content }
     end
   end

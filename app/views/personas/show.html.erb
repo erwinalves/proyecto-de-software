@@ -1,2 +1,22 @@
+<p id="notice"><%= notice %></p>
 <h1> Mostrar Persona</h1>
-nombre : <%= @persona.nombre%>
+<table class= "striped">
+	<thead>
+		<tr>
+			<th data-field="nombre">nombre</th>
+			<th data-field="rol">rol</th>
+			<th data-field="rut">rut</th>
+			<th data-field="telefono">telefono</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+		   <td><%= @persona.nombre%> </td>
+            <td><%= @persona.rol%></td>
+            <td><%= @persona.rut%></td>
+            <td><%= @persona.telefono%></td>
+  
+	</tbody>
+</table>
+
+

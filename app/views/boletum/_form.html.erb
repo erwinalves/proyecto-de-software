@@ -1,0 +1,42 @@
+<%=  form_for(@boletum) do |f| %>
+    <% if @boleum.errors.any? %>
+        <div id="error_explanation"> </div>
+        <h2><%= pluralize(@boleta.errors.count, "error") %> Prohibido guardar esta boleta:</h2>
+
+        <ul>
+          <% @boleta.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+        </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :vendedor %>
+      <%= f.text_field :vendedor %>
+    </div>
+
+    <div class="field">
+      <%= f.label :valor_total %>
+      <%= f.text_field :valor_total %>
+    </div>
+
+    <div class="field">
+      <%= f.label :tipo_pago %>
+      <%= f.text_field :tipo_pago %>
+    </div> 
+
+    <div class="field">
+      <%= f.label :cantidad_producto %>
+      <%= f.text_field :cantidad_producto %>
+    </div> 
+
+    <div class="field">
+      <%= f.label :lista_producto %>
+      <%= f.text_field :lista_producto %>
+    </div> 
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

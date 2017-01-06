@@ -1,6 +1,10 @@
+<%@productos.each do |productos| %>
+<%= productos.id %>
+<%end%>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Productos</h1>
+<h1>Lista de Productos</h1>
 
 <table>
   <thead>
@@ -20,9 +24,9 @@
         <td><%= producto.stock_minimo %></td>
         <td><%= producto.nombre %></td>
         <td><%= producto.precio %></td>
-        <td><%= link_to 'Show', producto %></td>
-        <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
-        <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', producto %></td>
+        <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
+        <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

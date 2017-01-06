@@ -1,8 +1,8 @@
 class BoletumController < ApplicationController
-	
+before_action :set_boleta, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@boletum=Boletum.all
+		@boletum=Boletum.paginate(:page => params[:page], :per_page => 10)
 		
 	end
 	def new
@@ -10,14 +10,12 @@ class BoletumController < ApplicationController
 	end
 
 	def create
-		@boletum = Boletum.new(vendedor: params[:boletum][:vendedor],valor_total:params[:boletum][:vendedor])
-		@boletum.save
-		redirect_to @boletum
+		@boletum = Boletum.new(boleta_params)
 		respond_to do |format|
-			if @boletun.save
-				format.html{redirect_to @boletum/new, notice: 'Boleta Guardada Con Exito'}
+			if @boletum.save
+				format.html{redirect_to @boletum, notice: 'Boleta Guardada Con Exito'}
 			else
-				format.html{render :nuevo}
+				format.html{render :new}
 			end
 		end
 	end	

@@ -1,35 +1,6 @@
-<div style="width:80%;margin:0 auto;">
-<h1>Ingresar boleta</h1>
-    <%= form_for @boletum, url: new_boletum_url, html: { method: :post } do |f| %>
 
-    <div class="field">
-        <%= f.text_field :id, placeholder: "id" %>
-    </div>
-    <div class="field">
-        <%= f.text_field :vendedor, placeholder: "Vendedor", style:"height:50px;",class:"form-control" %>
-    </div>
-    <div class="field">
-        <%= f.text_field :valor_total, placeholder: "Escribe aqui el valor total", style:"height:50px;",class:"form-control" %>
-    </div>
-    <div class="imput-field col s6">
-    <div class="control-group">
-      <%= f.label :tipo_pago, "tipo de pago" %><br />
-        <%= f.select(:tipo_pago, options_for_select([['Efectivo', 'Efectivo'], ['Debito', 'Debito'],['Credito', 'Credito'],['Cheque','Cheque']]), ) %>
-    </div>
-    </div>
-    <div class="field">
-        <%= f.text_field :tipo_pago, placeholder: "Escribe aqui la cantidad de productos", style:"height:50px;",class:"form-control" %>
-    </div>
-    <div class="field">
-        <%= f.text_field :cantidad_producto, placeholder: "Escribe aqui la cantidad de productos", style:"height:50px;",class:"form-control" %>
-    </div>
-    <div class="field">
-        <%= f.text_field :lista_productos, placeholder: "Escribe aqui la lista de productos", style:"height:50px;",class:"form-control" %>
-    </div>
-    <div class="field">
-        <%= f.submit "Guardar", class:"btn be-red pink large-padding" %>
-        <%= link_to 'Atras', boletum_index_path %>
-    </div>
-  <%end%>
-  </div>
+<h1>Ingresar boleta</h1>
+    <%= render 'form'%>
+    <%= link_to 'atras', boletum_path %>
+    
   

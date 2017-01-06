@@ -1,24 +1,20 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Stock actual:</strong>
-  <%= @producto.stock_actual %>
-</p>
-
-<p>
-  <strong>Stock minimo:</strong>
-  <%= @producto.stock_minimo %>
-</p>
-
-<p>
-  <strong>Nombre:</strong>
-  <%= @producto.nombre %>
-</p>
-
-<p>
-  <strong>Precio:</strong>
-  <%= @producto.precio %>
-</p>
-
+<h1> Mostrar Factura</h1>
+<table class= "striped">
+	<thead>
+		<tr>
+			<th data-field="monto de factura">stock actual</th>
+			<th data-field="cantidad de productos">stock minimo</th>
+			<th data-field="rut del proveedor">nombre</th>
+			<th data-field="rut del proveedor">precio</th>
+		</tr>
+	</thead>
+	<tbody>
+		   <td><%= @producto.stock_actual%> </td>
+            <td><%= @producto.stock_minimo%></td>
+            <td><%= @producto.nombre%></td>
+            <td><%= @producto.precio%></td>
+	</tbody>
+</table>
 <%= link_to 'Edit', edit_producto_path(@producto) %> |
 <%= link_to 'Back', productos_path %>

@@ -1,5 +1,5 @@
 <%=  form_for(@boletum) do |f| %>
-    <% if @boleum.errors.any? %>
+    <% if @boletum.errors.any? %>
         <div id="error_explanation"> </div>
         <h2><%= pluralize(@boleta.errors.count, "error") %> Prohibido guardar esta boleta:</h2>
 
@@ -39,4 +39,5 @@
     <div class="actions">
       <%= f.submit %>
     </div>
+
 <% end %>

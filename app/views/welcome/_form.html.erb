@@ -1,0 +1,33 @@
+<%= form_for(@welcome) do |f| %>
+  <% if @welcome.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@welcome.errors.count, "error") %> no es correcto:</h2>
+
+      <ul>
+      <% @welcome.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.number_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.number_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

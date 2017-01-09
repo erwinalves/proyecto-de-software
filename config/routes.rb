@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :productos
+  
   get 'productos/index'
 
   get 'productos/show'
@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   get 'productos/new'
 
   root 'welcome#index'
-  
 
+  resources :welcome
+  resources :users
+  resources :productos
   resources :carros
   resources :facturas
   resources :boletum

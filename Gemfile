@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'materialize-sass'
 gem 'bootstrap-sass'
 gem 'rapidfire'
+gem 'simple_form'
+gem 'rails-footnotes'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

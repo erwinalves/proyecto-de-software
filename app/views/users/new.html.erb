@@ -1,5 +1,13 @@
 <h1>Nuevo Usuario</h1>
 
-<%= render 'form' %>
+<% if flash[:error] %>
+<p><%= flash[:error] %></p>
+<% end %>
+<%= simple_form_for(:administrador, :url => administrador_path) do |f| %>
+<%= f.input :email%>
+<%= f.input :password %>
+<%= f.button :submit %>
+	
+<% end %>
 
 <%= link_to 'Back', users_path %>

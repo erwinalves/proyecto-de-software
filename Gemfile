@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'rapidfire'
 gem 'simple_form'
 gem 'rails-footnotes'
+gem 'devise'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'materialize-sass'
 gem 'bootstrap-sass'
 gem 'rapidfire'
+gem 'simple_form'
+gem 'rails-footnotes'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -27,7 +29,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

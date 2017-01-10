@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @boletum.id %>
+</p>
+
+<p>
+  <strong>Vendedor:</strong>
+  <%= @boletum.vendedor %>
+</p>
+
+<p>
+  <strong>Valor total:</strong>
+  <%= @boletum.valor_total %>
+</p>
+
+<p>
+  <strong>Tipo pago:</strong>
+  <%= @boletum.tipo_pago %>
+</p>
+
+<p>
+  <strong>Cantidad producto:</strong>
+  <%= @boletum.cantidad_producto %>
+</p>
+
+<%= link_to 'Edit', edit_boletum_path(@boletum) %> |
+<%= link_to 'Back', boleta_path %>

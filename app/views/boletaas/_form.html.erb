@@ -1,0 +1,37 @@
+<%= form_for(@boletaa) do |f| %>
+  <% if @boletaa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boletaa.errors.count, "error") %> prohibited this boletaa from being saved:</h2>
+
+      <ul>
+      <% @boletaa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vendedor %><br>
+    <%= f.text_field :vendedor %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo_boleta %><br>
+    <%= f.number_field :codigo_boleta %>
+  </div>
+  <div class="field">
+    <%= f.label :monto %><br>
+    <%= f.text_field :monto %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad_producto %><br>
+    <%= f.number_field :cantidad_producto %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_pago %><br>
+    <%= f.text_field :tipo_pago %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

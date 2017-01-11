@@ -1,5 +1,5 @@
 <%@productos.each do |productos| %>
-<%= productos.id %>
+<% productos.id %>
 <%end%>
 
 <p id="notice"><%= notice %></p>
@@ -9,10 +9,7 @@
 <table>
   <thead>
     <tr>
-      <th>Stock actual</th>
-      <th>Stock minimo</th>
-      <th>Nombre</th>
-      <th>Precio</th>
+      <th>Nombre del producto</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,12 +17,8 @@
   <tbody>
     <% @productos.each do |producto| %>
       <tr>
-        <td><%= producto.stock_actual %></td>
-        <td><%= producto.stock_minimo %></td>
         <td><%= producto.nombre %></td>
-        <td><%= producto.precio %></td>
         <td><%= link_to 'Mostrar', producto %></td>
-        <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
         <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'esta seguro?' } %></td>
       </tr>
     <% end %>
@@ -34,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Producto', new_producto_path %>
+<%= link_to 'Nuevo Producto', new_producto_path %>

@@ -8,31 +8,27 @@
 </head>
 <body>
 	<header>
-		<nav class="be-red write large-padding">
-			<ul class="no-list row center-xs">
-				<li class="col-md">
-					
-					<%= link_to "Inicio", root_path %>
-				</li>
-				<li class="col-md">
-					<%= link_to "Agregar Boleta", new_boletum_path %>    
-				</li>
-				<li class="col-md">
-					<%= link_to "Agregar Factura", new_factura_path %>
-				</li>
-				<li class="col-md">
-					<%= link_to "Productos", new_producto_path %>
-				</li>
-				<li class="col-md">
-					<%= link_to "Personas", personas_path %>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
+    <nav class="be-red write large-padding">
+      <ul class="no-list row center-xs">
+        <li class="col-md">
+          
+          <%= link_to "Inicio", root_path %>
+        </li>
+        <li class="col-md">
+          <%= link_to "Boletas", boletaas_path %>    
+        </li>
+        <li class="col-md">
+          <%= link_to "Facturas", documentos_path %>
+        </li>
+        <li class="col-md">
+          <%= link_to "Productos", productos_path %>
+        </li>
+        <li class="col-md">
+          <%= link_to "Personas", personas_path %>
+        </li>
+      </ul>
+    </nav>
+  </header>
 <%= yield %>
-
 </body>
-
-
 </html>

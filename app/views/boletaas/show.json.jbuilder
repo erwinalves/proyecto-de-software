@@ -1,0 +1,1 @@
+json.partial! "boletaas/boletaa", boletaa: @boletaa

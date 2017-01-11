@@ -1,0 +1,2 @@
+json.extract! documento, :id, :tipo_documento, :cantidad_producto, :rut_proveedor, :fecha_emision, :valor_neto, :valor_exento, :valor_iva, :folio, :created_at, :updated_at
+json.url documento_url(documento, format: :json)

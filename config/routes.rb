@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :boleta
+  resources :boletaas
+  resources :documentos
   get 'administrador/index'
 
   get 'productos/index'
@@ -20,7 +21,6 @@ Rails.application.routes.draw do
   resources :welcome
   resources :productos
   resources :carros
-  resources :facturas
   resources :boletum
   resources :personas
   resources :productos

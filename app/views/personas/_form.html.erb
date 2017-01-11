@@ -1,7 +1,7 @@
 <%=  form_for(@persona) do |f| %>
     <% if @persona.errors.any? %>
         <div id="error_explanation"> </div>
-        <h2><%= pluralize(@persona.errors.count, "error") %> Prohibido guardar este persona:</h2>
+        <h5><%= pluralize(@persona.errors.count, "error") %> Prohibido guardar este persona:</h5>
 
         <ul>
           <% @persona.errors.full_messages.each do |message| %>

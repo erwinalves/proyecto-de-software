@@ -1,20 +1,8 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   resources :boletaas
   resources :documentos
-  get 'administrador/index'
-
-  get 'productos/index'
-
-  get 'productos/show'
-
-  get 'productos/destroy'
-
-  get 'productos/update'
-
-  get 'productos/edit'
-
-  get 'productos/new'
 
   root 'welcome#index'
 

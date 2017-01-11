@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20170111031837) do
   create_table "documentos", force: :cascade do |t|
     t.integer  "tipo_documento"
     t.integer  "cantidad_producto"
-    t.integer  "rut_proveedor"
+    t.string   "rut_proveedor"
     t.string   "fecha_emision"
     t.float    "valor_neto"
     t.float    "valor_exento"
@@ -83,15 +83,6 @@ ActiveRecord::Schema.define(version: 20170111031837) do
     t.float    "precio"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "apellido"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
   end
 
   add_foreign_key "carros", "boleta", on_delete: :cascade

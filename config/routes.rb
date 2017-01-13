@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   devise_for :users
+  devise_for :usuarios
+  devise_for :pruebas
   resources :boletaas
   resources :documentos
 

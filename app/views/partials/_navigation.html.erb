@@ -1,0 +1,27 @@
+<tbody>
+<nav class="be-red write large-padding">
+    <ul class="no-list row center-xs">
+            <li class="col-md">
+            <%= link_to "Inicio", root_path %>
+            </li>
+            <li class="col-md">
+              <%= link_to "Boletas", boletaas_path %>    
+            </li>
+            <li class="col-md">
+              <%= link_to "Facturas", documentos_path %>
+            </li>
+            <li class="col-md">
+              <%= link_to "Productos", productos_path %>
+            </li>
+            <li class="col-md">
+              <%= link_to "Personas", personas_path %>
+            </li>
+              <% if user_signed_in? %>
+            <li>
+              <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
+            </li>
+          <%end%>
+        <%end%>
+      </ul>
+    </nav>
+  </tbody>

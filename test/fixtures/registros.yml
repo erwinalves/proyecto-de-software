@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ingreso: 2017-01-14 22:33:18
+  salida: 2017-01-14 22:33:18
+  fecha: 2017-01-14
+
+two:
+  ingreso: 2017-01-14 22:33:18
+  salida: 2017-01-14 22:33:18
+  fecha: 2017-01-14

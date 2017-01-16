@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ingreso:</strong>
+  <%= @registro.ingreso %>
+</p>
+
+<p>
+  <strong>Salida:</strong>
+  <%= @registro.salida %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @registro.fecha %>
+</p>
+
+<%= link_to 'Editar', edit_registro_path(@registro) %> |
+<%= link_to 'Volver', registros_path %>

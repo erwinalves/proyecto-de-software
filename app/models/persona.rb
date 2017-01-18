@@ -3,6 +3,7 @@ class Persona < ActiveRecord::Base
 	has_many :boletaas
 	has_many :documentos
     has_many :registros
+    belongs_to :users
 	#Validacion Vendedor no null
 	validates :nombre , presence: { message: "no debe estar vacio"} , confirmation: true
     #Validacion Vendedor solo letras

@@ -1,6 +1,6 @@
 class PersonasController < ApplicationController
 before_action :set_persona, only: [:show, :edit, :update, :destroy]
-
+before_action :authenticate_user!, only: [:create,:new]
     def index
      @personas = Persona.paginate(:page => params[:page], :per_page => 10)
     end
@@ -14,7 +14,7 @@ before_action :set_persona, only: [:show, :edit, :update, :destroy]
     end
 
     def create
-     @persona = Persona.new(persona_params)
+     @persona = current_user.personas.new(persona_params)
       respond_to do |format|
         if@persona.save
           format.html{redirect_to @persona, notice: 'Fue creado una Persona con Exito.'}
@@ -22,7 +22,6 @@ before_action :set_persona, only: [:show, :edit, :update, :destroy]
           format.html{render :new}
         end
       end
-
     end
 
     def edit
@@ -46,10 +45,7 @@ before_action :set_persona, only: [:show, :edit, :update, :destroy]
       end
     end
 
-
-
   private
-
     def set_persona
      @persona = Persona.find(params[:id])
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115013318) do
+ActiveRecord::Schema.define(version: 20170117164927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 20170115013318) do
 
   create_table "carros", force: :cascade do |t|
     t.integer  "cant_prod"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "producto_id"
-    t.integer  "factura_id"
-    t.integer  "boletum_id"
+    t.integer  "boletaa_id"
+    t.integer  "documento_id"
   end
 
   create_table "documentos", force: :cascade do |t|
@@ -71,9 +71,9 @@ ActiveRecord::Schema.define(version: 20170115013318) do
     t.integer  "rol"
     t.integer  "rut"
     t.integer  "telefono"
-    t.float    "hrs_trabajadas"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "users_id"
   end
 
   create_table "productos", force: :cascade do |t|
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20170115013318) do
     t.date     "fecha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "persona_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -147,7 +148,5 @@ ActiveRecord::Schema.define(version: 20170115013318) do
   add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true, using: :btree
   add_index "usuarios", ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "carros", "boleta", on_delete: :cascade
-  add_foreign_key "carros", "facturas", on_delete: :cascade
   add_foreign_key "carros", "productos", on_delete: :cascade
 end

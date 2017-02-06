@@ -11,6 +11,10 @@
                 <%= f.input :email, required: true, autofocus: true %>
                 <%= f.input :password, required: true, hint: ("#{@minimum_password_length} carácteres mínimos" if @minimum_password_length) %>
                 <%= f.input :password_confirmation, required: true %>
+                <%= f.input :name, required: true %>
+                <%= f.input :rol, required: true %>
+                <%= f.input :rut, required: true %>
+                <%= f.input :telefono, required: true %>
             </div>
 
             <div class="form-actions">

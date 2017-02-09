@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<h1> Mostrar Personas</h1>
+<table class= "striped">
+	<thead>
+		<tr>
+			<th data-field="nombre de persona">nombre</th>
+			<th data-field="email">email</th>
+			<th data-field="rol">rol</th>
+			<th data-field="rut">rut</th>
+			<th data-field="telefono">telefono</th>
+		</tr>
+	</thead>
+	<tbody>
+		   <td><%= @user.nombre%></td>
+		   <td><%= @user.email%> </td>
+            <td><%= @user.rol%></td>
+            <td><%= @user.rut%></td>
+            <td><%= @user.telefono%></td>
+	</tbody>
+</table>
+<%= link_to 'Volver', users_path %>

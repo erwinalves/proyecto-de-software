@@ -24,7 +24,7 @@ class RegistrosController < ApplicationController
   # POST /registros
   # POST /registros.json
   def create
-    @registro = Registro.new(registro_params)
+    @registro = current_user.registros.new(registro_params)
 
     respond_to do |format|
       if @registro.save

@@ -10,9 +10,7 @@ Rails.application.routes.draw do
   resources :welcome
   resources :productos
   resources :carros
-  resources :boletum
-  resources :personas
-  resources :productos
+  resources :users
 
 
   # The priority is based upon order of creation: first created -> highest priority.

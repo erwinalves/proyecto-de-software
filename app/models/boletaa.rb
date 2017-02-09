@@ -1,6 +1,6 @@
 class Boletaa < ActiveRecord::Base
-	has_one :Persona
-	has_one :Carro
+	has_one :users
+	has_one :carros
 	#Validacion Vendedor no null
 	validates :vendedor , presence: { message: "Nombre de vendedor no debe estar vacio"} , confirmation: true
     #Validacion Vendedor solo letras

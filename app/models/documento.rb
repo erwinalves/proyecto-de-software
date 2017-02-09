@@ -1,6 +1,6 @@
 class Documento < ActiveRecord::Base
-	has_one :Persona
-	has_one :Carro
+	has_one :users
+	has_one :carros
 
 	#Validacion tipo_documento no null
 	validates :tipo_documento , presence: { message: "Nombre no debe estar vacio"} , confirmation: true

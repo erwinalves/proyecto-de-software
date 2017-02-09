@@ -1,3 +1,6 @@
 <div class="panel panel-primary center">
-  <h3> Las tres B</h3>
+  <h1> Las tres B</h1>
 </div>
+<% if user_signed_in? %>
+<h3> Bienvenido <%= current_user.email %></h3>
+<%end%>

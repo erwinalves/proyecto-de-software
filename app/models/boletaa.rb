@@ -1,6 +1,6 @@
 class Boletaa < ActiveRecord::Base
-	has_one :users
-	has_one :carros
+	has_one :user
+	has_one :carro
 	#Validacion Vendedor no null
 	validates :vendedor , presence: { message: "Nombre de vendedor no debe estar vacio"} , confirmation: true
     #Validacion Vendedor solo letras
@@ -9,6 +9,8 @@ class Boletaa < ActiveRecord::Base
 	#Validacion codigo boleta no null
     validates :codigo_boleta , presence: { message: "El codigo de boleta no debe estar vacio"} , confirmation: true
 	#Validacion Monto no null
+    validates :codigo_boleta, format: { with: /\A[0-9]+\z/,
+    message: "Solo se aceptan numeros" }
     validates :monto , presence: { message: "Monto no debe estar vacio"} , confirmation: true
     #Validacion monto solo numeros
     validates :monto, format: { with: /\A[0-9]+\z/,

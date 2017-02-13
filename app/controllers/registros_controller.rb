@@ -1,6 +1,6 @@
 class RegistrosController < ApplicationController
   before_action :set_registro, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user, except: [:show,:index]
   # GET /registros
   # GET /registros.json
   def index
@@ -62,6 +62,10 @@ class RegistrosController < ApplicationController
   end
 
   private
+    def validate_user
+      redirect_to new_user_session_path, notice: "vuelva a ingresar"
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_registro
       @registro = Registro.find(params[:id])

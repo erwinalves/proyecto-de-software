@@ -66,4 +66,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email, :encrypted_password, :reset_password_token)
     end
+
 end

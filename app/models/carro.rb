@@ -1,7 +1,7 @@
 class Carro < ActiveRecord::Base
 
-belongs_to :boletaas
-belongs_to :documentos
-belongs_to :productos
+belongs_to :boletaa
+belongs_to :documento
+belongs_to :producto
 
 end

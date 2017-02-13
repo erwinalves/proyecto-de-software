@@ -1,6 +1,6 @@
 class Producto < ActiveRecord::Base
 
-	has_many :carros
+	has_many :carro
 	#Validacion stock_actual no null
 	validates :stock_actual , presence: { message: " no debe estar vacio"} , confirmation: true
     #Validacion stock_actual solo numeros

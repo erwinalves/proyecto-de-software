@@ -4,21 +4,28 @@
 
             <h2>Registrar</h2>
 
-            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= f.error_notification %>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
 
             <div class="form-inputs">
-                <%= f.input :email, required: true, autofocus: true %>
-                <%= f.input :password, required: true, hint: ("#{@minimum_password_length} carácteres mínimos" if @minimum_password_length) %>
-                <%= f.input :password_confirmation, required: true %>
-                <%= f.input :nombre, required: true %>
-                <%= f.input :rol, required: true %>
-                <%= f.input :rut, required: true %>
-                <%= f.input :telefono, required: true %>
+                <%= f.email_field :email %>
+                <%= f.label :email%>
+                <%= f.password_field :password %>
+                <%= f.label :password %> 
+                <%= f.password_field :password_confirmation %>
+                <%= f.label :password_confirmation %> 
+                <%= f.text_field :nombre %>
+                <%= f.label :nombre %>  
+                <%= f.number_field :rol %>
+                <%= f.label :rol%>
+                <%= f.number_field :rut %>
+                <%= f.label :rut%>
+                <%= f.number_field :telefono %>
+                <%= f.label :telefono%>
             </div>
 
             <div class="form-actions">
-                <%= f.button :submit, "Registrarse" %>
+                <%= f.submit "Registrarse" %>
             </div>
             <% end %>
             

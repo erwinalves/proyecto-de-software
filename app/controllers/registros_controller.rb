@@ -25,17 +25,12 @@ class RegistrosController < ApplicationController
   # POST /registros.json
   def create
     @registro = current_user.registros.new(registro_params)
-
-    respond_to do |format|
       if @registro.save
-        format.html { redirect_to @registro, notice: 'Registro was successfully created.' }
-        format.json { render :show, status: :created, location: @registro }
+        redirect_to @registro
       else
-        format.html { render :new }
-        format.json { render json: @registro.errors, status: :unprocessable_entity }
+        render :new
       end
     end
-  end
 
   # PATCH/PUT /registros/1
   # PATCH/PUT /registros/1.json

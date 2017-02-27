@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo producto:</strong>
+  <%= @product.codigo_producto %>
+</p>
+
+<p>
+  <strong>Stock actual:</strong>
+  <%= @product.stock_actual %>
+</p>
+
+<p>
+  <strong>Stock minimo:</strong>
+  <%= @product.stock_minimo %>
+</p>
+
+<p>
+  <strong>Nombre producto:</strong>
+  <%= @product.nombre_producto %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @product.precio %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_producto: 1
+  stock_actual: 1
+  stock_minimo: 1
+  nombre_producto: MyString
+  precio: 1.5
+
+two:
+  codigo_producto: 1
+  stock_actual: 1
+  stock_minimo: 1
+  nombre_producto: MyString
+  precio: 1.5

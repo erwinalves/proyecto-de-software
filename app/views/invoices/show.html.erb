@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo documento:</strong>
+  <%= @invoice.tipo_documento %>
+</p>
+
+<p>
+  <strong>Cantidad producto:</strong>
+  <%= @invoice.cantidad_producto %>
+</p>
+
+<p>
+  <strong>Rut proveedor:</strong>
+  <%= @invoice.rut_proveedor %>
+</p>
+
+<p>
+  <strong>Valor neto:</strong>
+  <%= @invoice.valor_neto %>
+</p>
+
+<p>
+  <strong>Valor exento:</strong>
+  <%= @invoice.valor_exento %>
+</p>
+
+<p>
+  <strong>Valor iva:</strong>
+  <%= @invoice.valor_iva %>
+</p>
+
+<p>
+  <strong>Folio:</strong>
+  <%= @invoice.folio %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

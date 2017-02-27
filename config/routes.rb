@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :carros
+  resources :products
+  resources :tickets
+  resources :invoices
   resources :people
   devise_for :users
   get 'welcome/index'

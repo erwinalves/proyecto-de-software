@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vendedor:</strong>
+  <%= @ticket.vendedor %>
+</p>
+
+<p>
+  <strong>Codigo boleta:</strong>
+  <%= @ticket.codigo_boleta %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @ticket.monto %>
+</p>
+
+<p>
+  <strong>Cantidad producto:</strong>
+  <%= @ticket.cantidad_producto %>
+</p>
+
+<p>
+  <strong>Tipo pago:</strong>
+  <%= @ticket.tipo_pago %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

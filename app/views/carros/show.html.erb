@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @carro.product %>
+</p>
+
+<p>
+  <strong>Ticket:</strong>
+  <%= @carro.ticket %>
+</p>
+
+<p>
+  <strong>Invoices:</strong>
+  <%= @carro.invoices %>
+</p>
+
+<p>
+  <strong>Cantidad producto:</strong>
+  <%= @carro.cantidad_producto %>
+</p>
+
+<%= link_to 'Edit', edit_carro_path(@carro) %> |
+<%= link_to 'Back', carros_path %>

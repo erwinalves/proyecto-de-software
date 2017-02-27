@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217194451) do
+ActiveRecord::Schema.define(version: 20170221041330) do
+
+  create_table "carros", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "ticket_id"
+    t.integer  "invoices_id"
+    t.integer  "cantidad_producto"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "carros", ["invoices_id"], name: "index_carros_on_invoices_id"
+  add_index "carros", ["product_id"], name: "index_carros_on_product_id"
+  add_index "carros", ["ticket_id"], name: "index_carros_on_ticket_id"
+
+  create_table "invoices", force: :cascade do |t|
+    t.integer  "tipo_documento"
+    t.integer  "cantidad_producto"
+    t.string   "rut_proveedor"
+    t.float    "valor_neto"
+    t.float    "valor_exento"
+    t.float    "valor_iva"
+    t.integer  "folio"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "people", force: :cascade do |t|
     t.integer  "user_id"
@@ -24,6 +49,26 @@ ActiveRecord::Schema.define(version: 20170217194451) do
   end
 
   add_index "people", ["user_id"], name: "index_people_on_user_id"
+
+  create_table "products", force: :cascade do |t|
+    t.integer  "codigo_producto"
+    t.integer  "stock_actual"
+    t.integer  "stock_minimo"
+    t.string   "nombre_producto"
+    t.float    "precio"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.string   "vendedor"
+    t.integer  "codigo_boleta"
+    t.float    "monto"
+    t.integer  "cantidad_producto"
+    t.string   "tipo_pago"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

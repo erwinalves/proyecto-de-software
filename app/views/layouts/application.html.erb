@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Andres</title>
+  <title>las tres B</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<p class="notice"><%= notice %></p>
+
+  <header>
+    <%if !user_signed_in? %>
+    <li class= "col-md center">
+      <%=link_to "Iniciar sesion", new_user_session_path%>
+    </li>
+    <%else%>
+        <nav class="be-red write large-padding">
+          <ul class="no-list row center-xs">
+            <li class="col-md">
+            <%= link_to "Inicio", root_path %>
+            </li>
+            <li class="col-md">
+              <%= link_to "Boletas", tickets_path %>    
+            </li>
+            <li class="col-md">
+              <%= link_to "Facturas", invoices_path %>
+            </li>
+            <li class="col-md">
+              <%= link_to "Productos", products_path %>
+            </li>
+            <li class="col-md">
+              <%= link_to "Personas", people_path %>
+            </li>
+              <% if user_signed_in? %>
+            <li>
+              <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
+            </li>
+          <%end%>
+        <%end%>
+      </ul>
+    </nav>
+  </header>
+    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-
 <%= yield %>
-
 </body>
 </html>

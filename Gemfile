@@ -45,5 +45,11 @@ group :development do
   gem 'spring'
 
   gem 'devise'
+
+  gem 'materialize-sass'
+
+  gem 'bootstrap-sass'
+
+  
 end
 

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo_documento: 1
+  cantidad_producto: 1
+  rut_proveedor: MyString
+  valor_neto: 1.5
+  valor_exento: 1.5
+  valor_iva: 1.5
+  folio: 1
+
+two:
+  tipo_documento: 1
+  cantidad_producto: 1
+  rut_proveedor: MyString
+  valor_neto: 1.5
+  valor_exento: 1.5
+  valor_iva: 1.5
+  folio: 1

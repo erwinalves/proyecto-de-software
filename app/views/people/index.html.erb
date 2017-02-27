@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing People</h1>
+<h1>Lista de Personas</h1>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <th>Usuario</th>
       <th>Nombre</th>
       <th>Rol</th>
       <th>Rut</th>
@@ -22,9 +22,9 @@
         <td><%= person.rol %></td>
         <td><%= person.rut %></td>
         <td><%= person.telefono %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', person %></td>
+        <td><%= link_to 'Editar', edit_person_path(person) %></td>
+        <td><%= link_to 'Eliminar', person, method: :delete, data: { confirm: '¿Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Person', new_person_path %>
+<%= link_to 'Nueva Persona', new_person_path %>

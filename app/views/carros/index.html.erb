@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Carros</h1>
+<h1>Lista de Carros</h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= carro.ticket %></td>
         <td><%= carro.invoices %></td>
         <td><%= carro.cantidad_producto %></td>
-        <td><%= link_to 'Show', carro %></td>
-        <td><%= link_to 'Edit', edit_carro_path(carro) %></td>
-        <td><%= link_to 'Destroy', carro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', carro %></td>
+        <td><%= link_to 'Editar', edit_carro_path(carro) %></td>
+        <td><%= link_to 'Eliminar', carro, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Carro', new_carro_path %>
+<%= link_to 'Nuevo Carro', new_carro_path %>

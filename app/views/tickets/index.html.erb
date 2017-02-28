@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Tickets</h1>
+<h1>Lista de Boletas</h1>
 
 <table>
   <thead>
@@ -22,9 +22,9 @@
         <td><%= ticket.monto %></td>
         <td><%= ticket.cantidad_producto %></td>
         <td><%= ticket.tipo_pago %></td>
-        <td><%= link_to 'Show', ticket %></td>
-        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', ticket %></td>
+        <td><%= link_to 'Editar', edit_ticket_path(ticket) %></td>
+        <td><%= link_to 'Eliminar', ticket, method: :delete, data: { confirm: 'Estas seguro de elminar la boleta?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Ticket', new_ticket_path %>
+<%= link_to 'Crear Boleta', new_ticket_path %>

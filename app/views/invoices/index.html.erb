@@ -26,9 +26,9 @@
         <td><%= invoice.valor_exento %></td>
         <td><%= invoice.valor_iva %></td>
         <td><%= invoice.folio %></td>
-        <td><%= link_to 'Show', invoice %></td>
-        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', invoice %></td>
+        <td><%= link_to 'Editar', edit_invoice_path(invoice) %></td>
+        <td><%= link_to 'Eliminar', invoice, method: :delete, data: { confirm: '¿Estas Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Invoice', new_invoice_path %>
+<%= link_to 'Nueva Factura', new_invoice_path %>

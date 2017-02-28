@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Registries</h1>
+<h1>Lista de Registros</h1>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= registry.people %></td>
         <td><%= registry.ingreso %></td>
         <td><%= registry.salida %></td>
-        <td><%= link_to 'Show', registry %></td>
-        <td><%= link_to 'Edit', edit_registry_path(registry) %></td>
-        <td><%= link_to 'Destroy', registry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', registry %></td>
+        <td><%= link_to 'Editar', edit_registry_path(registry) %></td>
+        <td><%= link_to 'Eliminar', registry, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Registry', new_registry_path %>
+<%= link_to 'Nuevo Registro', new_registry_path %>

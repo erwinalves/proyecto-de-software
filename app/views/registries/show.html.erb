@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>People:</strong>
+  <%= @registry.people %>
+</p>
+
+<p>
+  <strong>Ingreso:</strong>
+  <%= @registry.ingreso %>
+</p>
+
+<p>
+  <strong>Salida:</strong>
+  <%= @registry.salida %>
+</p>
+
+<%= link_to 'Edit', edit_registry_path(@registry) %> |
+<%= link_to 'Back', registries_path %>

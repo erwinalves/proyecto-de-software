@@ -19,6 +19,7 @@
         <td><%= person.nombre %></td>
         <td><%= link_to 'Ver', person %></td>
         <td><%= link_to 'Editar', edit_person_path(person) %></td>
+        <td><%= link_to 'Marcar hora', registries_path %></td>
         <td><%= link_to 'Eliminar', person, method: :delete, data: { confirm: '¿Esta seguro?' } %></td>
       </tr>
     <% end %>

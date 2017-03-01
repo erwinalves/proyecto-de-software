@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Persona</th>
       <th>Ingreso</th>
       <th>Salida</th>
       <th colspan="3"></th>
@@ -15,11 +14,10 @@
   <tbody>
     <% @registries.each do |registry| %>
       <tr>
-        <td><%= registry.people.nombre %></td>
         <td><%= registry.ingreso %></td>
         <td><%= registry.salida %></td>
         <td><%= link_to 'Mostrar', registry %></td>
-        <td><%= link_to 'Editar', edit_registry_path(registry) %></td>
+        <td><%= link_to 'marcar salida', edit_registry_path(registry) %></td>
         <td><%= link_to 'Eliminar', registry, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       </tr>
     <% end %>
@@ -28,4 +26,5 @@
 
 <br>
 
-<%= link_to 'Nuevo Registro', new_registry_path %>
+<%= link_to 'Nuevo Registro', new_registry_path %> |
+<%= link_to 'Volver', people_path %>

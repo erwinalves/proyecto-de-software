@@ -14,8 +14,8 @@ class Ticket < ActiveRecord::Base
     message: "Solo se aceptan numeros" }
     validates :monto , presence: { message: "Monto no debe estar vacio"} , confirmation: true
     #Validacion monto solo numeros
-    validates :monto, format: { with: /\A[0-9]+\z/,
-    message: "Solo se aceptan numeros" }
+    #validates :monto, format: { with: /\A[0-9]+\z/,
+    #message: "Solo se aceptan numeros" }
 	#Validacion cantidad de productos no null
     validates :cantidad_producto , presence: { message: "La cantidad no debe ser vacia"} , confirmation: true
     #Validacion cantidad de productos solo numeros

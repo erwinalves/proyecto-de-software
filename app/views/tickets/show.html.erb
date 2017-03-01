@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
+<h1> Mostrar Boleta </h1>
+<table class= "striped">
+  <thead>
+    <tr>
+      <th data-field="vendedor">Vendedor</th>
+      <th data-field="codigo_boleta">Codigo de Boleta</th>
+      <th data-field="monto">Monto</th>
+      <th data-field="cantidad_producto">Cantidad de Productos</th>
+      <th data-field="tipo_pago">Tipo de Pago</th>
+      
+      
 
-<p>
-  <strong>Vendedor:</strong>
-  <%= @ticket.vendedor %>
-</p>
+    </tr>
 
-<p>
-  <strong>Codigo boleta:</strong>
-  <%= @ticket.codigo_boleta %>
-</p>
+  </thead>
+  <tbody>
+    <td><%= @ticket.vendedor %></td>
+    <td><%= @ticket.codigo_boleta %></td>
+    <td><%= @ticket.monto %></td>
+    <td><%= @ticket.cantidad_producto %></td>
+    <td><%= @ticket.tipo_pago %></td>
+  </tbody>
+</table> 
 
-<p>
-  <strong>Monto:</strong>
-  <%= @ticket.monto %>
-</p>
-
-<p>
-  <strong>Cantidad producto:</strong>
-  <%= @ticket.cantidad_producto %>
-</p>
-
-<p>
-  <strong>Tipo pago:</strong>
-  <%= @ticket.tipo_pago %>
-</p>
+  
 
 <%= link_to 'Editar Boleta', edit_ticket_path(@ticket) %> |
 <%= link_to 'Volver', tickets_path %>

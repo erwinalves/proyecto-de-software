@@ -9,16 +9,16 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :Contraseña %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> caracteres minimos)</em>
     <% end %><br />
-    <%= f.password_field :contraseña, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :confirmar_contraseña, autocomplete: "off" %>
+    <%= f.label :Confirmar_contraseña %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">

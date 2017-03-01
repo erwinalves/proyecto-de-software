@@ -10,6 +10,7 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.json
   def show
+    @person = Person.find(params[:id])
   end
 
   # GET /people/new
@@ -19,16 +20,17 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
+    @person = Person.find(params[:id])
   end
 
   # POST /people
   # POST /people.json
   def create
-    @person = Person.new(person_params)
+    @person =current_user.people.new(person_params)
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to @person, notice: 'Person was successfully created.' }
+        format.html { redirect_to @person, notice: 'Persona fue creada con exito.' }
         format.json { render :show, status: :created, location: @person }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to @person, notice: 'Person was successfully updated.' }
+        format.html { redirect_to @person, notice: 'Persona fue actualizada con exito.' }
         format.json { render :show, status: :ok, location: @person }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class PeopleController < ApplicationController
   def destroy
     @person.destroy
     respond_to do |format|
-      format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
+      format.html { redirect_to people_url, notice: 'Persona fue eliminada con exito.' }
       format.json { head :no_content }
     end
   end

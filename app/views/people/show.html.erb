@@ -1,29 +1,25 @@
 <p id="notice"><%= notice %></p>
+<h1> Mostrar Personas </h1>
+<table class= "striped">
+  <thead>
+    <tr>
+      <th data-field="nombre">Nombre</th>
+      <th data-field="rol">Rol</th>
+      <th data-field="rut">Rut</th>
+      <th data-field="telefono">Telefono</th>
+      
+      
 
-<p>
-  <strong>Usuarior:</strong>
-  <%= @person.user %>
-</p>
+    </tr>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @person.nombre %>
-</p>
-
-<p>
-  <strong>Rol:</strong>
-  <%= @person.rol %>
-</p>
-
-<p>
-  <strong>Rut:</strong>
-  <%= @person.rut %>
-</p>
-
-<p>
-  <strong>Telefono:</strong>
-  <%= @person.telefono %>
-</p>
+  </thead>
+  <tbody>
+    <td><%= @person.nombre %></td>
+    <td><%= @person.rol %></td>
+    <td><%= @person.rut %></td>
+    <td><%= @person.telefono %></td>
+  </tbody>
+</table> 
 
 <%= link_to 'Editar', edit_person_path(@person) %> |
 <%= link_to 'Volver', people_path %>

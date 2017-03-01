@@ -16,10 +16,9 @@
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
-    <% rol = {'Vendedor' => 1, 'Part time' => 2, 'Jefe' => 3} %>
-    <% lista = rol.sort %>
+    
     <%= f.label :rol %><br>
-    <%= f.select :rol, lista, selected: "Vendedor"%>
+    <%= f.number_field :rol%>
   </div>
   <div class="field">
     <%= f.label :rut %><br>

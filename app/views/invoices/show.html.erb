@@ -1,39 +1,29 @@
 <p id="notice"><%= notice %></p>
+<h1> Mostrar Facturas </h1>
+<table class= "striped">
+  <thead>
+    <tr>
+      <th data-field="tipo_documento">Tipo de Documento</th>
+      <th data-field="cantidad_producto">Cantidad de Producto</th>
+      <th data-field="rut_proveedor">Rut Proveedor</th>
+      <th data-field="valor_neto">Valor neto</th>
+      <th data-field="valor_exento">valor Exento</th>
+      <th data-field="valor_iva">Valor IVA</th>
+      <th data-field="folio">Folio</th>
+      
 
-<p>
-  <strong>Tipo documento:</strong>
-  <%= @invoice.tipo_documento %>
-</p>
+    </tr>
 
-<p>
-  <strong>Cantidad producto:</strong>
-  <%= @invoice.cantidad_producto %>
-</p>
-
-<p>
-  <strong>Rut proveedor:</strong>
-  <%= @invoice.rut_proveedor %>
-</p>
-
-<p>
-  <strong>Valor neto:</strong>
-  <%= @invoice.valor_neto %>
-</p>
-
-<p>
-  <strong>Valor exento:</strong>
-  <%= @invoice.valor_exento %>
-</p>
-
-<p>
-  <strong>Valor iva:</strong>
-  <%= @invoice.valor_iva %>
-</p>
-
-<p>
-  <strong>Folio:</strong>
-  <%= @invoice.folio %>
-</p>
-
+  </thead>
+  <tbody>
+    <td><%= @invoice.tipo_documento %></td>
+    <td><%= @invoice.cantidad_producto %></td>
+    <td><%= @invoice.rut_proveedor %></td>
+    <td><%= @invoice.valor_neto %></td>
+    <td><%= @invoice.valor_exento %></td>
+    <td><%= @invoice.valor_iva %></td>
+    <td><%= @invoice.folio %></td>
+  </tbody>
+</table>  
 <%= link_to 'Editar', edit_invoice_path(@invoice) %> |
 <%= link_to 'Volver', invoices_path %>

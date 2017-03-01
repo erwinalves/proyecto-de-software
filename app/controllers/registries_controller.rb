@@ -28,7 +28,7 @@ class RegistriesController < ApplicationController
 
     respond_to do |format|
       if @registry.save
-        format.html { redirect_to @registry, notice: 'Registry was successfully created.' }
+        format.html { redirect_to @registry, notice: 'Registro fue creado con exito.' }
         format.json { render :show, status: :created, location: @registry }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RegistriesController < ApplicationController
   def update
     respond_to do |format|
       if @registry.update(registry_params)
-        format.html { redirect_to @registry, notice: 'Registry was successfully updated.' }
+        format.html { redirect_to @registry, notice: 'Registro fue actualizado con exito.' }
         format.json { render :show, status: :ok, location: @registry }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class RegistriesController < ApplicationController
   def destroy
     @registry.destroy
     respond_to do |format|
-      format.html { redirect_to registries_url, notice: 'Registry was successfully destroyed.' }
+      format.html { redirect_to registries_url, notice: 'Registro fue eliminado con exito.' }
       format.json { head :no_content }
     end
   end

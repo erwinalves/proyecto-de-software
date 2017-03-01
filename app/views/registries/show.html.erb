@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
+<h1> Mostrar Registros </h1>
+<table class= "striped">
+  <thead>
+    <tr>
+      
+      <th data-field="ingreso">Ingreso</th>
+      <th data-field="salida">Salida</th>
+      
+      
+      
 
-<p>
-  <strong>People:</strong>
-  <%= @registry.people %>
-</p>
+    </tr>
 
-<p>
-  <strong>Ingreso:</strong>
-  <%= @registry.ingreso %>
-</p>
+  </thead>
+  <tbody>
+    
+    <td><%= @registry.ingreso %></td>
+    <td><%= @registry.salida %></td>
+    
+  </tbody>
+</table> 
 
-<p>
-  <strong>Salida:</strong>
-  <%= @registry.salida %>
-</p>
+  <
+
 
 
 <%= link_to 'Volver', registries_path %>

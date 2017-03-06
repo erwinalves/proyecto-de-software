@@ -12,15 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :people_id %><br>
-    <%= f.text_field :people_id %>
-  </div>
-  <div class="field">
     <%= f.label :ingreso %><br>
     <%= f.datetime_select :ingreso %>
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "registrar entrada"%>
   </div>
 <% end %>

@@ -24,7 +24,7 @@ class RegistriesController < ApplicationController
   # POST /registries
   # POST /registries.json
   def create
-    @registry = Registry.new(registry_params)
+    @registry = current_person.registry.new(registry_params)
 
     respond_to do |format|
       if @registry.save
@@ -69,6 +69,6 @@ class RegistriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registry_params
-      params.require(:registry).permit(:people_id, :ingreso, :salida)
+      params.require(:registry).permit(:ingreso, :salida)
     end
 end

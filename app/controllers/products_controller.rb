@@ -27,13 +27,17 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     respond_to do |format|
-      if @product.save
+      if @product.stock_actual < @product.stock_minimo
+        format.html { redirect_to @product, notice: 'el stock actual debe ser mayor al stock minimo '}
+      else 
+        if @product.save
         format.html { redirect_to @product, notice: 'Producto fue creado con exito.' }
         format.json { render :show, status: :created, location: @product }
-      else
+        else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+        end
+    end
     end
   end
 

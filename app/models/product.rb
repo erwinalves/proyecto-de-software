@@ -21,4 +21,5 @@ class Product < ActiveRecord::Base
     #Validacion Precio solo numeros
     validates :precio, format: { with: /\A[0-9.]+\z/,
     message: "Solo se aceptan numeros" }
+    
 end

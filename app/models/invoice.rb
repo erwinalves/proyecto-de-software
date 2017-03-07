@@ -25,7 +25,7 @@ class Invoice < ActiveRecord::Base
     #Validacion valor_iva no null
 	validates :valor_iva , presence: { message: "Valor iva no debe estar vacio"} , confirmation: true
     #Validacion valor_iva solo numeros
-    #validates :valor_iva, format: { with: /\A[0-9]+\z/, message: "Solo se aceptan numeros" }
+    validates :valor_iva, format: { with: /\A[0-9.]+\z/, message: "Solo se aceptan numeros" }
     #Validacion folio no null
 	validates :folio , presence: { message: "Folio no debe estar vacio"} , confirmation: true
     #Validacion folio solo numeros

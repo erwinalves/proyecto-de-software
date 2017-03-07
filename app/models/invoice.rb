@@ -17,11 +17,11 @@ class Invoice < ActiveRecord::Base
     #Validacion valor_neto no null
 	validates :valor_neto , presence: { message: "Valor neto no debe estar vacio"} , confirmation: true
     #Validacion valor_neto solo numeros
-    #validates :valor_neto, format: { with: /\A[0-9]+\z/, message: "Solo se aceptan numeros" }
+    validates :valor_neto, format: { with: /\A[0-9.]+\z/, message: "Solo se aceptan numeros" }
     #Validacion valor_exento no null
 	validates :valor_exento , presence: { message: "Valor exento no debe estar vacio"} , confirmation: true
     #Validacion valor_exento solo numeros
-    #validates :valor_exento, format: { with: /\A[0-9]+\z/, message: "Solo se aceptan numeros" }
+    validates :valor_exento, format: { with: /\A[0-9.]+\z/, message: "Solo se aceptan numeros" }
     #Validacion valor_iva no null
 	validates :valor_iva , presence: { message: "Valor iva no debe estar vacio"} , confirmation: true
     #Validacion valor_iva solo numeros

@@ -4,8 +4,9 @@
   <thead>
     <tr>
       
-      <th data-field="ingreso">Ingreso</th>
-      <th data-field="salida">Salida</th>
+      <th data-field="Ingreso">Ingreso</th>
+      <th data-field="Salida">Salida</th>
+      <th data-field="Horas Trabajadas">Horas Trabajadas</th>
       
       
       
@@ -13,10 +14,14 @@
     </tr>
 
   </thead>
+  <% t0=@registry.ingreso %>
+  <%t1=@registry.salida%>
+  <%t3= (t1-t0)/3600%>
   <tbody>
     
     <td><%= @registry.ingreso %></td>
     <td><%= @registry.salida %></td>
+    <td><%= t3 %></td>
     
   </tbody>
 </table> 

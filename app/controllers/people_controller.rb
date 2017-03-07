@@ -20,13 +20,14 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
+    
     @person = Person.find(params[:id])
   end
 
   # POST /people
   # POST /people.json
   def create
-    @person =current_user.people.new(person_params)
+    @person =Person.new(person_params)
 
     respond_to do |format|
       if @person.save

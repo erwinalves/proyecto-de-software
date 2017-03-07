@@ -12,13 +12,13 @@ class Product < ActiveRecord::Base
     validates :stock_minimo, format: { with: /\A[0-9]+\z/,
     message: "Solo se aceptan numeros" }
     #Validacio nombre no null
-    validates :nombre , presence: { message: "no debe estar vacio"} , confirmation: true
+    validates :nombre_producto , presence: { message: "no debe estar vacio"} , confirmation: true
     #Validacion nombre solo letras
-    validates :nombre, format: { with: /\A[a-zA-Z]+\z/,
+    validates :nombre_producto, format: { with: /\A[a-zA-Z]+\z/,
     message: "Solo se aceptan letras" }
     #Validacion Precio no null
 	validates :precio , presence: { message: " no debe estar vacio"} , confirmation: true
     #Validacion Precio solo numeros
-    validates :precio, format: { with: /\A[0-9]+\z/,
+    validates :precio, format: { with: /\A[0-9.]+\z/,
     message: "Solo se aceptan numeros" }
 end

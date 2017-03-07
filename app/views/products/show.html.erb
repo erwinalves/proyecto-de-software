@@ -8,8 +8,9 @@
       <th data-field="stock_minimo">Stock Minimo</th>
       <th data-field="nombre_producto">Nombre Producto</th>
       <th data-field="precio">Precio</th>
-      
-      
+      <%if (@product.stock_actual<@product.stock_minimo) %> 
+       <h4><div class="alert alert-danger" role="alert">Stock actual esta bajo el stock minimo</div></h4>
+      <%end%>
 
     </tr>
 

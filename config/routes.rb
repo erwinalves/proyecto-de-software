@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
+  resources :products do 
+    resources :carros
+  end
+  resources :tickets do
+    resources :carros
+  end
+  resources :invoices do 
+    resources :carros
+  end
+  resources :people do
+    resources :registries
+  end
   resources :registries
-  resources :carros
-  resources :products
-  resources :tickets
-  resources :invoices
-  resources :people
+  get 'registrostotales/',to: 'registries#mostrar', as: 'registro'
   devise_for :users
   get 'welcome/index'
-resources :users
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

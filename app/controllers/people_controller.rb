@@ -31,7 +31,7 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to @person, notice: 'Persona fue creada con exito.' }
+        format.html { redirect_to @person }
         format.json { render :show, status: :created, location: @person }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to @person, notice: 'Persona fue actualizada con exito.' }
+        format.html { redirect_to @person }
         format.json { render :show, status: :ok, location: @person }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class PeopleController < ApplicationController
   def destroy
     @person.destroy
     respond_to do |format|
-      format.html { redirect_to people_url, notice: 'Persona fue eliminada con exito.' }
+      format.html { redirect_to people_url }
       format.json { head :no_content }
     end
   end

@@ -22,6 +22,6 @@
 </table> 
 
 <%= link_to 'Editar', edit_person_path(@person) %> |
-<%= link_to 'Ver Registros', registries_path %> |
+<%= link_to 'Ver Registros', registro_path(:camp => @person.id) %> |
 <%= link_to 'Volver', people_path %>
 

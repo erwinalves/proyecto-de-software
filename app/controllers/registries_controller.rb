@@ -25,10 +25,11 @@ class RegistriesController < ApplicationController
   # POST /registries.json
   def create
     @registry = Registry.new(registry_params)
+    @registry.people = @people
 
     respond_to do |format|
       if @registry.save
-        format.html { redirect_to @registry, notice: 'Registro fue creado con exito.' }
+        format.html { redirect_to @registry }
         format.json { render :show, status: :created, location: @registry }
       else
         format.html { render :new }
@@ -37,12 +38,17 @@ class RegistriesController < ApplicationController
     end
   end
 
+  def mostrar
+    persona = params[:camp]
+    @registry = Registry.where(people_id: persona) 
+  end
+
   # PATCH/PUT /registries/1
   # PATCH/PUT /registries/1.json
   def update
     respond_to do |format|
       if @registry.update(registry_params)
-        format.html { redirect_to @registry, notice: 'Registro fue actualizado con exito.' }
+        format.html { redirect_to @registry}
         format.json { render :show, status: :ok, location: @registry }
       else
         format.html { render :edit }
@@ -56,7 +62,7 @@ class RegistriesController < ApplicationController
   def destroy
     @registry.destroy
     respond_to do |format|
-      format.html { redirect_to registries_url, notice: 'Registro fue eliminado con exito.' }
+      format.html { redirect_to registries_url }
       format.json { head :no_content }
     end
   end

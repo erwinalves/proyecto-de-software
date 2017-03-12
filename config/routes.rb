@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     resources :registries
   end
   resources :registries
+  
   get 'registrostotales/',to: 'registries#mostrar', as: 'registro'
+  
   devise_for :users
   get 'welcome/index'
   resources :users

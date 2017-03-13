@@ -30,7 +30,22 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
-
+<div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :rol %><br />
+    <%= f.number_field :rol, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :rut %><br />
+    <%= f.number_field :rut, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.number_field :telefono, autocomplete: "off" %>
+  </div>
   <div class="actions">
     <%= f.submit "Actualizar" %>
   </div>

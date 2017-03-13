@@ -8,12 +8,15 @@
       <th data-field="stock_minimo">Stock Minimo</th>
       <th data-field="nombre_producto">Nombre Producto</th>
       <th data-field="precio">Precio</th>
+      <th data-field="Total">Total</th>
       <%if (@product.stock_actual<@product.stock_minimo) %> 
        <h4><div class="alert alert-danger" role="alert">Stock actual esta bajo el stock minimo</div></h4>
       <%end%>
 
     </tr>
-
+    <% s = @product.stock_actual.to_i %>
+    <% pp = @product.precio.to_f %>
+    <% precio_total = pp*s %>
   </thead>
   <tbody>
     <td><%= @product.codigo_producto %></td>
@@ -21,6 +24,7 @@
     <td><%= @product.stock_minimo %></td>
     <td><%= @product.nombre_producto %></td>
     <td><%= @product.precio %></td>
+    <td> <%= precio_total %></td>
   </tbody>
 </table> 
 

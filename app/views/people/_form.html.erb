@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+
+
   <div class="field">
     <%= f.label :nombre %><br>
     <%= f.text_field :nombre %>
@@ -28,7 +30,17 @@
     <%= f.label :telefono %><br>
     <%= f.number_field :telefono %>
   </div>
+
+         <div class="field">
+        <%= f.label :User,"user:", :class => "col-md-2" %>
+        <div class="col-md-10"  style="margin-bottom: 10px;">
+        <%= f.select('user_id', User.all.collect{|u| [u.email, u.id]}, class: 'chosen-select')%>
+      </div>
+      </div>
+
   <div class="actions">
     <%= f.submit "Ingresar Persona" %>
   </div>
+
+
 <% end %>

@@ -16,6 +16,7 @@ class PeopleController < ApplicationController
   # GET /people/new
   def new
     @person = Person.new
+    @user_id = User.joins('INNER JOIN user on ')
   end
 
   # GET /people/1/edit

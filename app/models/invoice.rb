@@ -10,26 +10,35 @@ class Invoice < ActiveRecord::Base
 	validates :cantidad_producto , presence: { message: "Cantidad de productos  no debe estar vacio"} , confirmation: true
     #Validacion cantidad_producto solo numeros
     validates :cantidad_producto, format: { with: /\A[0-9]+\z/, message: "Solo se aceptan numeros" }
+    #Validacion cantidad_producto mayor que cero
+    validates :cantidad_producto, :numericality => { :greater_than => 0, message: "debe ser mayor a cero"}
     #Validacion rut_proveedor no null
-	validates :rut_proveedor , presence: { message: "Nombre no debe estar vacio"} , confirmation: true
+	validates :rut_proveedor , presence: { message: "Rut no debe estar vacio"} , confirmation: true
     #validacion cantidad de numeros de rut
     validates :rut_proveedor, length: { in: 1..8, message: "debe tener minimo 8 numeros" }
     #Validacion valor_neto no null
 	validates :valor_neto , presence: { message: "Valor neto no debe estar vacio"} , confirmation: true
     #Validacion valor_neto solo numeros
     validates :valor_neto, format: { with: /\A[0-9.]+\z/, message: "Solo se aceptan numeros" }
+    #Validacion valor_neto debe ser mayor que cero
+    validates :valor_neto, :numericality => { :greater_than => 0, message: "debe ser mayor a cero"}
     #Validacion valor_exento no null
 	validates :valor_exento , presence: { message: "Valor exento no debe estar vacio"} , confirmation: true
     #Validacion valor_exento solo numeros
     validates :valor_exento, format: { with: /\A[0-9.]+\z/, message: "Solo se aceptan numeros" }
+    #Validacion valor_exento mayor que cero
+    validates :valor_exento, :numericality => { :greater_than => 0, message: "debe ser mayor a cero"}
     #Validacion valor_iva no null
 	validates :valor_iva , presence: { message: "Valor iva no debe estar vacio"} , confirmation: true
     #Validacion valor_iva solo numeros
     validates :valor_iva, format: { with: /\A[0-9.]+\z/, message: "Solo se aceptan numeros" }
+    #Validacion valor_iva mayor que cero
+    validates :valor_iva, :numericality => { :greater_than => 0, message: "debe ser mayor a cero"}
     #Validacion folio no null
 	validates :folio , presence: { message: "Folio no debe estar vacio"} , confirmation: true
     #Validacion folio solo numeros
     validates :folio, format: { with: /\A[0-9]+\z/, message: "Solo se aceptan numeros" }
-
+    #Validacion folio maximo 11 digitos
+    validates :folio, length: { maximum: 11 }
 
 end

@@ -29,7 +29,7 @@ class PeopleController < ApplicationController
   # POST /people
   # POST /people.json
   def create
-    @person =current_user.people.new(person_params)
+    @person = current_user.create_person(person_params)
 
     respond_to do |format|
       if @person.save
@@ -74,6 +74,7 @@ class PeopleController < ApplicationController
 
     def validate_user
       redirect_to new_user_session_path, notice: "necesitas iniciar sesión"
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params

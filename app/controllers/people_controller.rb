@@ -1,5 +1,6 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /people
   # GET /people.json
@@ -28,7 +29,7 @@ class PeopleController < ApplicationController
   # POST /people
   # POST /people.json
   def create
-    @person =Person.new(person_params)
+    @person =current_user.people.new(person_params)
 
     respond_to do |format|
       if @person.save
@@ -70,6 +71,9 @@ class PeopleController < ApplicationController
     def set_person
       @person = Person.find(params[:id])
     end
+
+    def validate_user
+      redirect_to new_user_session_path, notice: "necesitas iniciar sesión"
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params

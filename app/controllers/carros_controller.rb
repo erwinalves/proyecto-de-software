@@ -18,6 +18,10 @@ class CarrosController < ApplicationController
     @carro = Carro.new
   end
 
+  def nuevo
+    @carro = Carro.new
+  end
+
   # GET /carros/1/edit
   def edit
   end

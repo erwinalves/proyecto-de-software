@@ -14,15 +14,18 @@
     </tr>
 
   </thead>
-  <% t0=@registry.ingreso %>
-  <%t1=@registry.salida%>
-  <%t2=(t1-t0)/3600%>
+  
+  <% t0=@registry.ingreso%>
+  <% t1=@registry.salida%>
+  
+  <%if( @registry.salida !=nil)%>
+  <% t2 = (t1-t0)/3600 %>
+  <%end%>
   <tbody>
     
     <td><%= @registry.ingreso %></td>
     <td><%= @registry.salida %></td>
     <td><%= t2 %></td>
-    
   </tbody>
 </table> 
 

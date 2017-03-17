@@ -1,4 +1,4 @@
-<%= form_for(@registry) do |f| %>
+<%= form_for(@registry, :html => { :role =>"form"}) do |f| %>
   <% if @registry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@registry.errors.count, "error") %> prohibited this registry from being saved:</h2>
@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :persona %>
-    <%= f.select('people_id', person.all.collect{|c| [c.nombre, c.id]})
+    <%= f.select("people_id", Person.all.collect{|c| [c.nombre, c.id]})%>
   </div>
 
   <div class="field">

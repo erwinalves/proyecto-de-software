@@ -7,7 +7,7 @@ class Invoice < ActiveRecord::Base
 	#Validacion tipo_documento solo numeros
     validates :tipo_documento, format: { with: /\A[0-9]+\z/, message: "Solo se aceptan numeros" }
     #validacion tipo_pago entre 1 al 5
-    validates :tipo_pago, format: { with: /\A[12345]+\z/, message: "Solo se aceptan numero del 1 al 4" }
+    validates :tipo_pago, format: { with: /\A[12345]+\z/, message: "Solo se aceptan numero del 1 al 5" }
     validates :tipo_pago, length: { in: 1..1, message: "Solo deben ser unidades" }
     #Validacion valor_neto no null
 	validates :valor_neto , presence: { message: "Valor neto no debe estar vacio"} , confirmation: true

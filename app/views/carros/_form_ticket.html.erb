@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :product_id %><br>
-    <%= f.select( :product_id, Product.all.collect{|c| [c.codigo_producto, c.id]} )%>
+    <%= f.label :id_Producto %><br>
+    <%= f.number_field :product_id%>
   </div>
   <div class="field">
-    <%= f.label :ticket_id %><br>
-    <%= f.text_field :ticket_id %>
+    <%= f.label :id_Boleta %><br>
+    <%= f.number_field :ticket_id %>
   </div>
   <div class="field">
     <%= f.label :cantidad_producto %><br>
     <%= f.number_field :cantidad_producto %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear" %>
   </div>
 <% end %>

@@ -38,6 +38,9 @@
             <li class="col-md">
               <h4><%= link_to "Personas", people_path %></h4>
             </li>
+            <li class="col-md">
+              <h4><%= link_to "Registrar horas", registries_path %></h4>
+            </li>
               <h4><% if user_signed_in? %></h4>
             <li>
               <h4><%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %></h4>

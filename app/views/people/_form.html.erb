@@ -17,16 +17,12 @@
     <%= f.label :nombre %><br>
     <%= f.text_field :nombre %>
   </div>
-  <div class="field">
-    
     <%= f.label :rol %><br>
-    <%= f.number_field :rol%>
+    <%= options_for_select([['Jefe (ingrese un 1)',1], ['Vendedor (ingrese un 2)', 2], ['Seguridad (ingrese un 3)', 3]]) %>
+  <div class="field">
+    <%= f.number_field :rol %>
   </div>
   
-  <div class="field">
-    <%= f.label :rut %><br>
-    <%= f.number_field :rut %>
-  </div>
   <div class="field">
     <%= f.label :telefono %><br>
     <%= f.number_field :telefono %>

@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   resources :invoices do 
     resources :carros
   end
-  resources :people do
-    resources :registries
-  end
+  resources :people 
   resources :registries
+  resources :carros
   
   get 'registrostotales/',to: 'registries#mostrar', as: 'registro'
-  
+  get 'nuevo/',to: 'carros#nuevo', as: 'nuevo'
+ 
   devise_for :users
   get 'welcome/index'
   resources :users

@@ -16,7 +16,6 @@ class RegistriesController < ApplicationController
   # GET /registries/new
   def new
     @registry = Registry.new
-    @people_id = User.joins('INNER JOIN user on ')
   end
 
   # GET /registries/1/edit
@@ -26,7 +25,7 @@ class RegistriesController < ApplicationController
   # POST /registries
   # POST /registries.json
   def create
-    @registry = current_person.create_registries(registry_params)
+    @registry = Registry.create(registry_params)
 
     respond_to do |format|
       if @registry.save

@@ -13,27 +13,12 @@
 
   <div class="field">
     <%= f.label :tipo_documento %><br>
+    <%= options_for_select([['Ordinaria (ingrese un 1)',1], ['Simplificada (ingrese un 2)', 2], ['Rectificada (ingrese un 3)', 3],['Recapitulada (ingrese un 4)', 4],['Electronica (ingrese un 5)', 4]]) %>
     <%= f.number_field :tipo_documento %>
-  </div>
-  <div class="field">
-    <%= f.label :cantidad_producto %><br>
-    <%= f.number_field :cantidad_producto %>
-  </div>
-  <div class="field">
-    <%= f.label :rut_proveedor %><br>
-    <%= f.text_field :rut_proveedor %>
   </div>
   <div class="field">
     <%= f.label :valor_neto %><br>
     <%= f.number_field :valor_neto %>
-  </div>
-  <div class="field">
-    <%= f.label :valor_exento %><br>
-    <%= f.number_field :valor_exento %>
-  </div>
-  <div class="field">
-    <%= f.label :valor_iva %><br>
-    <%= f.number_field :valor_iva %>
   </div>
   <div class="field">
     <%= f.label :folio %><br>

@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :vendedor %><br>
-    <%= f.text_field :vendedor %>
-  </div>
-  <div class="field">
     <%= f.label :codigo_boleta %><br>
     <%= f.number_field :codigo_boleta %>
   </div>
@@ -24,12 +20,9 @@
     <%= f.text_field :monto %>
   </div>
   <div class="field">
-    <%= f.label :cantidad_producto %><br>
-    <%= f.number_field :cantidad_producto %>
-  </div>
-  <div class="field">
     <%= f.label :tipo_pago %><br>
-    <%= f.text_field :tipo_pago %>
+    <%= options_for_select([['Efectivo (ingrese un 1)',1], ['Debito (ingrese un 2)', 2], ['Credito (ingrese un 3)', 3],['Cheque (ingrese un 4)', 4]]) %>
+    <%= f.number_field :tipo_pago %>
   </div>
   <div class="actions">
     <%= f.submit "Crear"%>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313194859) do
+ActiveRecord::Schema.define(version: 20170317085151) do
 
   create_table "carros", force: :cascade do |t|
     t.integer  "product_id"
@@ -28,21 +28,16 @@ ActiveRecord::Schema.define(version: 20170313194859) do
 
   create_table "invoices", force: :cascade do |t|
     t.integer  "tipo_documento"
-    t.integer  "cantidad_producto"
-    t.string   "rut_proveedor"
     t.float    "valor_neto"
-    t.float    "valor_exento"
-    t.float    "valor_iva"
     t.integer  "folio"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "people", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "nombre"
     t.integer  "rol"
-    t.integer  "rut"
     t.integer  "telefono"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -71,13 +66,11 @@ ActiveRecord::Schema.define(version: 20170313194859) do
   add_index "registries", ["people_id"], name: "index_registries_on_people_id"
 
   create_table "tickets", force: :cascade do |t|
-    t.string   "vendedor"
     t.integer  "codigo_boleta"
     t.float    "monto"
-    t.integer  "cantidad_producto"
-    t.string   "tipo_pago"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "tipo_pago"
   end
 
   create_table "users", force: :cascade do |t|

@@ -5,7 +5,6 @@
     <tr>
       <th data-field="nombre">Nombre</th>
       <th data-field="rol">Rol</th>
-      <th data-field="rut">Rut</th>
       <th data-field="telefono">Telefono</th>
       
       
@@ -15,13 +14,20 @@
   </thead>
   <tbody>
     <td><%= @person.nombre %></td>
-    <td><%= @person.rol %></td>
-    <td><%= @person.rut %></td>
+    <% if @person.rol==1 %>
+      <td>Jefe</td>
+      <%end%>
+      <% if @person.rol==2 %>
+        <td>Vendedor</td>
+        <%end%>
+        <%if @person.rol==3%>
+        <td>Seguridad</td>
+    <%end%>
     <td><%= @person.telefono %></td>
   </tbody>
 </table> 
 
-<%= link_to 'Editar', edit_person_path(@person) %> |
 <%= link_to 'Ver Registros', registro_path(:camp => @person.id) %> |
+<%= link_to 'marcar hora', registry_path %> |
 <%= link_to 'Volver', people_path %>
 

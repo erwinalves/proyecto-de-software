@@ -3,10 +3,8 @@
 <table class= "striped">
   <thead>
     <tr>
-      <th data-field="vendedor">Vendedor</th>
       <th data-field="codigo_boleta">Codigo de Boleta</th>
       <th data-field="monto">Monto</th>
-      <th data-field="cantidad_producto">Cantidad de Productos</th>
       <th data-field="tipo_pago">Tipo de Pago</th>
       
       
@@ -15,11 +13,20 @@
 
   </thead>
   <tbody>
-    <td><%= @ticket.vendedor %></td>
     <td><%= @ticket.codigo_boleta %></td>
     <td><%= @ticket.monto %></td>
-    <td><%= @ticket.cantidad_producto %></td>
-    <td><%= @ticket.tipo_pago %></td>
+    <% if @ticket.tipo_pago==1%>
+      <td>Efectivo</td>
+    <%end%>
+    <% if @ticket.tipo_pago==2%>
+      <td>Debito</td>
+    <%end%>
+    <% if @ticket.tipo_pago==3%>
+      <td>Credito</td>
+    <%end%>
+    <% if @ticket.tipo_pago==4%>
+      <td>Cheque</td>
+    <%end%>
   </tbody>
 </table> 
 
